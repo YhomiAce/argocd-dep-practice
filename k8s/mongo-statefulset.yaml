@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongo
+  annotations:
+    argocd.argoproj.io/tracking-id: nginx-app:apps/Deployment:cloudchamp/api
   namespace: cloudchamp
 spec:
   serviceName: mongo

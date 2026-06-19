@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
+  annotations:
+    argocd.argoproj.io/tracking-id: nginx-app:apps/Deployment:cloudchamp/frontend
   namespace: cloudchamp
   labels:
     role: frontend
